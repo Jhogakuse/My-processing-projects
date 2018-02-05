@@ -1,14 +1,13 @@
 void setup() {
   size(1000,600);
-  background(192, 64, 0);
+  background(0);
 }
 
 void draw() {
   if (mousePressed) {
     //stroke(255);
-    //fill(255);
-    stroke(255);
-    line(150, 25, 270, 350);
-    ellipse(mouseX, mouseY, 5, 5);
+    fill(mouseX, mouseY, random(mouseX));
+    stroke(mouseY, mouseX, randomGaussian());
+    ellipse(mouseX, mouseY, 25, 25);
   }
 }
